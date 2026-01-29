@@ -44,10 +44,10 @@ link:
 ## 1. 使用同域名组建前后端（避免跨域）
 ![image.png](https://file.quaternijkon.online/2026/01/710ea11a77b7c8e4966775dac21faf50.png)
 
-在server项目中添加路由，如果你的前端链接为url，那么这里填url/ws*（ws可以换成任何字符串，加不加*无所谓，但千万不能是url/*，这样work会接管所有请求，就连不上网页了）
+在server项目中添加路由，如果你的前端链接为`url`，那么这里填`url/ws*`（ws可以换成任何字符串，加不加*无所谓，但千万不能是`url/*`，这样worker会接管所有请求，就连不上网页了）
 ![image.png](https://file.quaternijkon.online/2026/01/3e6734c5a478838ea711563a8b2d54d7.png)
 
-相当于告诉 Cloudflare：“如果有人访问 `url/ws`，请不要去 Pages 找文件，直接交给 Worker 处理。这样前后端都使用相同的域名。
+相当于告诉 Cloudflare：“如果有人访问 `url/ws`，请不要去 Pages 找文件，直接交给 Worker 处理。” 这样前后端都使用相同的域名。
 
 最后你需要更新你的github仓库中的`./wrangler.toml`（zone_name 可以不需要配置，cloudflare能猜测到）
 ![image.png](https://file.quaternijkon.online/2026/01/97b1bbf1d3b4a06b325a1da0153f9beb.png)
