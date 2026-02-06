@@ -43,7 +43,7 @@
               "state": {
                 "file": "Note/Cloudfire/Cloudflare.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Cloudflare"
